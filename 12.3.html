@@ -1,0 +1,215 @@
+<html>
+
+    <head>
+
+        <link rel='stylesheet' href='style.css'>
+
+        <title> Sensors </title>
+
+    </head>
+
+    <body>
+
+        <div class='fleft'>
+
+            <a href = '0.1.html'> Foreward</a> <br>
+            <a href = '0.2.html'> Dedication</a> <br>
+            <a href = '0.3.html'> Guide</a> <br>
+
+            1. The Basics <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.1.html'> Arithmetic</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.2.html'> print()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.3.html'> External program</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.4.html'> Commenting</a> <br>
+
+            2. Variables <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '2.1.html'> Variables</a> <br>
+
+            3. String Manipulation <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '3.1.html'> String Manipulation</a> <br>
+
+            4. input() <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '4.1.html'> input()</a> <br>
+
+            5. Conditions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.1.html'> if</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.2.html'> Nesting</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.3.html'> Logic operations</a> <br>
+
+            6. Functions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.1.html'> def()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.2.html'> class</a> <br>
+
+            7. Loops <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.1.html'> while</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.2.html'> Infinite loops, break</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.3.html'> for</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.4.html'> try - except</a> <br>
+
+            8. Lists and Dictionares <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.1.html'> Lists</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.2.html'> Dicts</a> <br>
+
+            9. Useful modules <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '9.1.html'> Useful modules</a> <br>
+
+            10. Debugging <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '10.1.html'> Debugging</a> <br>
+
+            11. Test <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '11.1.html'> Test</a> <br>
+
+            12. Using EV3DEV <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.1.html'> Connecting the brick</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.2.html'> Motors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.3.html'> Sensors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.4.html'> LEDs</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.5.html'> Making sound</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.6.html'> Buttons</a> <br>
+
+            13. Conclusion <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '13.1.html'> Conclusion</a> <br>
+
+        </div>
+
+        <div class='fright'>
+
+            <h2>Sensors</h2>
+
+            Now let’s look at sensors. Sensors go into the number ports. In your EV3 set, there are the following sensors(in subjective order of use, starts from most used):<p>
+
+<code>Infrared      I = ev3.InfraredSensor()
+Ultrasonic    U = ev3.UltrasonicSensor()
+Color         C = ev3.ColorSensor()
+Light         L = ev3.LightSensor()
+Touch         T = ev3.TouchSensor()
+Sound         S = ev3.SoundSensor()
+</code><p>
+
+            For the purposes of this tutorial, these are the variable names. You do not need to specify ports, unless you have 2 of the same sensors plugged in.<p>
+
+            <h3>Infrared</h3>
+
+            You first have to set the mode of the sensor. Probably the only two you will use are <tt>'IR-PROX'</tt> and <tt>'IR-REMOTE'</tt>. You may need <tt>‘IR-SEEK’</tt> in some cases.<p>
+
+            So first set the mode by doing
+<code>I.mode = “IR_PROX”
+</code><p>
+
+            You can get the distance by doing
+<code>I.value()</code><p>
+
+            For
+<code>I.mode = “IR-REMOTE”</code><p>
+
+            you can do:
+<code>I.beacon(channel = &lt;number&gt;)
+I.bottom_left()
+I.bottom_right()
+I.top_left()
+I.top_right()</code>
+
+            which gives a boolean depending on whether the specific buttons is pressed. The beacon button is the button on the top. Note that the channel number starts from 1, not 0.<p>
+
+            In
+<code>I.mode = “IR-SEEK”
+</code><p>
+
+            you can use
+<code>I.distance(channel = &lt;number&gt;)
+I.heading()
+</code>
+            to find the distance and direction that the IR remote is in.<p>
+
+            <h3>Ultrasonic</h3>
+
+            The only mode you probably will use is<p>
+
+<code>U.mode = “US-DIST-CM”
+</code><p>
+
+<code>U.value()
+</code>
+            will give the distance to the object in front of it in millimeters, not centimeters.<p>
+
+            <h3>Color</h3>
+
+            There are 3 modes.<p>
+
+<code>C.mode = “COL-AMBIENT”
+</code>
+            This is used to get the ambient light(light in a room).<p>
+
+<code>C.ambient_light_intensity</code>
+            gives the ambient light.<p>
+
+<code>C.mode = “COL-COLOR”
+</code>
+            This is used to get the color of what the color sensor is reading.<p>
+
+            For individual values you can do
+<code>C.red
+C.green
+C.blue
+</code><p>
+
+            To get all the values at once, do
+<code>C.raw</code><p>
+
+<code>C.mode = “COL-REFLECT”
+</code>
+            This is used to read the amount of light that is reflecting off the object that the color sensor is facing.<p>
+
+<code>C.reflected_light_intensity
+</code>
+            gives the reflected light.<p>
+
+            <h3>Light</h3>
+
+            The light sensor has 2 modes that are very similar to the color sensor.<p>
+
+<code>L.mode = “AMBIENT”
+L.ambient_light_intensity
+</code>
+            gives the ambient light.<p>
+
+<code>L.mode = “REFLECT”
+L.reflected_light_intensity
+</code>
+            gives the reflected light.<p>
+
+            <h3>Touch</h3>
+
+<code>T.is_pressed</code>
+            will give a boolean. <tt>True</tt> if pressed, <tt>False</tt> if not pressed.
+
+            <h3>Sound</h3>
+
+            This will probably be the sensor that you will never use(I have never used it). This is from the documentation.<p>
+
+<code>S.mode = 'DB'
+S.sound_pressure
+</code>
+            A measurement of the measured sound pressure level, as a percent. Uses a flat weighting.<p>
+
+<code>S.mode = 'DBA'
+S.sound_pressure_low
+</code>
+            A measurement of the measured sound pressure level, as a percent. Uses A-weighting, which focuses on
+            levels up to 55 dB.<p>
+
+            <div class='navbuttons'>
+
+                <div class='back'>
+                    <a href="12.2.html">&lt;  Back</a>
+                </div>
+
+                <div class='next'>
+                    <a href="12.4.html">Next  &gt;</a>
+                </div>
+
+        </div>
+
+    </body>
+
+</html>

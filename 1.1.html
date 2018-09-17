@@ -1,0 +1,172 @@
+<html>
+
+    <head>
+
+        <link rel='stylesheet' href='style.css'>
+
+        <title> The Basics </title>
+
+    </head>
+
+    <body>
+
+        <div class='fleft'>
+
+            <a href = '0.1.html'> Foreward</a> <br>
+            <a href = '0.2.html'> Dedication</a> <br>
+            <a href = '0.3.html'> Guide</a> <br>
+
+            1. The Basics <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.1.html'> Arithmetic</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.2.html'> print()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.3.html'> External program</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.4.html'> Commenting</a> <br>
+
+            2. Variables <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '2.1.html'> Variables</a> <br>
+
+            3. String Manipulation <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '3.1.html'> String Manipulation</a> <br>
+
+            4. input() <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '4.1.html'> input()</a> <br>
+
+            5. Conditions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.1.html'> if</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.2.html'> Nesting</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.3.html'> Logic operations</a> <br>
+
+            6. Functions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.1.html'> def()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.2.html'> class</a> <br>
+
+            7. Loops <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.1.html'> while</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.2.html'> Infinite loops, break</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.3.html'> for</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.4.html'> try - except</a> <br>
+
+            8. Lists and Dictionares <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.1.html'> Lists</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.2.html'> Dicts</a> <br>
+
+            9. Useful modules <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '9.1.html'> Useful modules</a> <br>
+
+            10. Debugging <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '10.1.html'> Debugging</a> <br>
+
+            11. Test <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '11.1.html'> Test</a> <br>
+
+            12. Using EV3DEV <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.1.html'> Connecting the brick</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.2.html'> Motors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.3.html'> Sensors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.4.html'> LEDs</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.5.html'> Making sound</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.6.html'> Buttons</a> <br>
+
+            13. Conclusion <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '13.1.html'> Conclusion</a> <br>
+
+        </div>
+
+        <div class='fright'>
+
+            <h2>1. The Basics</h2>
+
+            What is Python? Python is a programming language. A program is just a set of instructions that you give to a computer to follow. It is almost like a recipe. There are loads of programming languages. Some are old, such as C and C++. Others are new, like Rust. <p>
+
+            Why Python? Python is a high-level programming language, which means you do not need to give the computer ultra-specific instructions. Don’t worry if you didn’t understand this bit. <p>
+
+            First, search for “Terminal” in Applications. Open it and type <p>
+
+<code>$ python3</code><p>
+
+            By the way, that dollar sign is just to tell you that you are in the terminal. Don’t type the dollar, just type <tt>python3</tt>. No capitals, computers are very picky. <p>
+
+            And a word of advice, do not copy and paste from this page into the terminal. <p>
+
+            Then you’ll see something like this. <p>
+
+<code>$ python3
+Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+</code><p>
+
+            And now you’re in the Python 3 interpreter. What you see on the first line in parentheses will be different, but do not worry. <p>
+
+            If you see something like Python 2.7, you are in Python 2, which is not what you should be in. You probably typed python, not python3. <p>
+
+            Let’s start off with some arithmetic, shall we? <p>
+
+<code>>>> 2 + 2
+4
+>>> 2+2
+4
+>>> 2  +  2
+4
+</code><p>
+
+            Throughout this tutorial, what you see after <tt>>>></tt> is what you type in Python 3. What you see after <tt>$</tt> is what you type in the terminal. If there is nothing in front, that is the computer. <p>
+
+            Hmm. Having any number of spaces between a number and the plus sign doesn’t matter. It is good practice, though, to put one space between a number and a sign. <p>
+
+            Let’s try some other things. <p>
+
+<code>>>> 5 - 2
+3
+>>> 2 * 3
+6
+>>> 7 / 3
+2.3333333333333335
+</code><p>
+
+            Okay… what just happened? Computers use floating points, so the final few digits will not always be correct. Don’t worry about it at this stage. <p>
+
+            Let’s do something more advanced. <p>
+
+<code>>>> 7 % 2
+1
+>>> 3 ** 2
+9
+</code><p>
+
+            <tt>%</tt> is the modulo operator. It gives the remainder of the number after dividing it. 7 / 2 = 3 R1. <p>
+            <tt>**</tt> is raising a number to a power. 3 to the power of 2 is 9. <p>
+
+<code>>>> 2 + 5 * 3
+17
+</code><p>
+
+            Python follows the order of operations. (PEDMAS, or BIDMAS for the GCSE M0 lads out there. Parentheses and exponents are the same things as brackets and indices.) Keep this in mind. <p>
+
+            In cases like this, it is more preferable to write the above as:
+
+<code>>>> 2 + 5*3
+17
+</code>
+            to easily read the order of operations.<p>
+
+            <p id='task'>Task:
+            Find the square root of 2. Hint: what number do you raise 2 to to get the square root?
+
+            <div class='navbuttons'>
+
+                <div class='back'>
+                    <a href="0.3.html">&lt;  Back</a>
+                </div>
+
+                <div class='next'>
+                    <a href="1.2.html">Next  &gt;</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

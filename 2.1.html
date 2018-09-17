@@ -1,0 +1,202 @@
+<html>
+
+    <head>
+
+        <link rel='stylesheet' href='style.css'>
+
+        <title> 2. Variables </title>
+
+    </head>
+
+    <body>
+
+        <div class='fleft'>
+
+            <a href = '0.1.html'> Foreward</a> <br>
+            <a href = '0.2.html'> Dedication</a> <br>
+            <a href = '0.3.html'> Guide</a> <br>
+
+            1. The Basics <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.1.html'> Arithmetic</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.2.html'> print()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.3.html'> External program</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.4.html'> Commenting</a> <br>
+
+            2. Variables <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '2.1.html'> Variables</a> <br>
+
+            3. String Manipulation <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '3.1.html'> String Manipulation</a> <br>
+
+            4. input() <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '4.1.html'> input()</a> <br>
+
+            5. Conditions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.1.html'> if</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.2.html'> Nesting</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.3.html'> Logic operations</a> <br>
+
+            6. Functions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.1.html'> def()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.2.html'> class</a> <br>
+
+            7. Loops <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.1.html'> while</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.2.html'> Infinite loops, break</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.3.html'> for</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.4.html'> try - except</a> <br>
+
+            8. Lists and Dictionares <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.1.html'> Lists</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.2.html'> Dicts</a> <br>
+
+            9. Useful modules <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '9.1.html'> Useful modules</a> <br>
+
+            10. Debugging <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '10.1.html'> Debugging</a> <br>
+
+            11. Test <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '11.1.html'> Test</a> <br>
+
+            12. Using EV3DEV <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.1.html'> Connecting the brick</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.2.html'> Motors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.3.html'> Sensors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.4.html'> LEDs</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.5.html'> Making sound</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.6.html'> Buttons</a> <br>
+
+            13. Conclusion <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '13.1.html'> Conclusion</a> <br>
+
+        </div>
+
+        <div class='fright'>
+
+            <h2>2. Variables</h2>
+
+            Okay, so doing simple math, printing, and commenting was fun, but… it can't really do anything. It’s a dumb program. What’s the use of such a program?<p>
+
+            For programs not to do the exact same thing over and over, we use variables.<p>
+
+            Variables can contain an integer. An integer is a whole number that can be positive or negative.<p>
+
+<code>>>> number = 5
+>>> number + 2
+7
+</code><p>
+
+            What happened? In the first line, we make a variable called <tt>number</tt>, and we store the number 5. Then we add 2 to it, which gives the expected answer of 7.<p>
+
+            Try doing <tt>number = 3</tt> then <tt>number + 2</tt>. What do you notice?<p>
+
+            Variables can also contain a string. A string is a group of characters.<p>
+
+<code>>>> name = “John”
+>>> print(name)
+John
+>>> print(“Hello“, name)
+Hello John
+</code><p>
+
+            Neat! Notice that we have to put quotation marks around the string to store it, but we do not need them for numbers. When using a variable, we do not put the variable’s name inside quotation marks.<p>
+
+            We can have multiple variables:<p>
+
+<code>>>> food = “bread”
+>>> drink = “water”
+>>> print(food, water)
+bread water
+</code><p>
+
+            There are also things called booleans: <tt>True</tt> and <tt>False.</tt><p>
+
+<code>>>> state = True
+>>> print(state)
+True
+</code><p>
+
+            Booleans can be especially useful. Be careful: when you put a boolean, you have to capitalize. You will get an error if you do not capitalize:<p>
+
+<code>>>> state = false
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'false' is not defined
+</code><p>
+
+            So don’t forget to capitalize.<p>
+
+            As a final note, there are a few restrictions on variable naming. Let’s see some examples.<p>
+
+<code>>>> 123state = None
+  File "<stdin>", line 1
+    123state = None
+           ^
+SyntaxError: invalid syntax
+
+>>> state@ = None
+  File "<stdin>", line 1
+    state@ = None
+           ^
+SyntaxError: invalid syntax
+
+>>> class = None
+  File "<stdin>", line 1
+    class = None
+          ^
+SyntaxError: invalid syntax
+</code><p>
+
+            By the way, giving a variable <tt>None</tt> means creating a variable with nothing in it. You can store <tt>None</tt> in a variable to have it as a placeholder until you put something else in it.<p>
+
+            The name of a variable cannot start with a number. It can start with a letter then have a number, but it cannot start with a number. So <tt>state123</tt> would be a valid variable name, while <tt>123state</tt> wouldn’t.<p>
+
+            Also, variable names cannot have a special character.<p>
+
+            Fair enough. But what’s wrong with <tt>class</tt>? <tt>class</tt> is actually one of 33 python keywords, meaning that they cannot be used as a name of a variable. The list is here:<p>
+
+
+<code>False       elif       lambda
+None        else       nonlocal
+True        except     not
+and         finally    or
+as          for        pass
+assert      from       raise
+break       global     return
+class       if         try
+continue    import     while
+def         in         with
+del         is         yield
+</code><p>
+
+            <p style="font-size=70%">Note: Keywords may change by version. Run import keyword; keyword.kwlist to check.
+
+            <p>There’s no need to memorize this, as it will be fairly obvious by the time you get the hang of python.
+
+            <p id='task'>
+
+            Tasks:
+
+            <ol>
+
+            <li>Make a program that prints <tt>Hello</tt> and your first name. You must use a variable. Mine would have to say <tt>Hello Yubin</tt>.</li>
+            <li>Make a program that prints Hello then your first name and last name. You must use 2 variables. Mine would have to say <tt>Hello Yubin Lee</tt>.</li>
+
+            </ol>
+
+            <div class='navbuttons'>
+
+                <div class='back'>
+                    <a href="1.4.html">&lt;  Back</a>
+                </div>
+
+                <div class='next'>
+                    <a href="3.1.html">Next  &gt;</a>
+                </div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,161 @@
+<html>
+
+    <head>
+
+        <link rel='stylesheet' href='style.css'>
+
+        <title> Logic Operators </title>
+
+    </head>
+
+    <body>
+
+        <div class='fleft'>
+
+            <a href = '0.1.html'> Foreward</a> <br>
+            <a href = '0.2.html'> Dedication</a> <br>
+            <a href = '0.3.html'> Guide</a> <br>
+
+            1. The Basics <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.1.html'> Arithmetic</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.2.html'> print()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.3.html'> External program</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '1.4.html'> Commenting</a> <br>
+
+            2. Variables <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '2.1.html'> Variables</a> <br>
+
+            3. String Manipulation <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '3.1.html'> String Manipulation</a> <br>
+
+            4. input() <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '4.1.html'> input()</a> <br>
+
+            5. Conditions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.1.html'> if</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.2.html'> Nesting</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '5.3.html'> Logic operations</a> <br>
+
+            6. Functions <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.1.html'> def()</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '6.2.html'> class</a> <br>
+
+            7. Loops <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.1.html'> while</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.2.html'> Infinite loops, break</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.3.html'> for</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '7.4.html'> try - except</a> <br>
+
+            8. Lists and Dictionares <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.1.html'> Lists</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '8.2.html'> Dicts</a> <br>
+
+            9. Useful modules <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '9.1.html'> Useful modules</a> <br>
+
+            10. Debugging <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '10.1.html'> Debugging</a> <br>
+
+            11. Test <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '11.1.html'> Test</a> <br>
+
+            12. Using EV3DEV <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.1.html'> Connecting the brick</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.2.html'> Motors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.3.html'> Sensors</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.4.html'> LEDs</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.5.html'> Making sound</a> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '12.6.html'> Buttons</a> <br>
+
+            13. Conclusion <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href = '13.1.html'> Conclusion</a> <br>
+
+        </div>
+
+        <div class='fright'>
+
+            <h2>Logic Operators</h2>
+
+            The second method is using logic operators.<p>
+
+<code>1 #!/usr/bin/python
+2 first_name = input(“What is your first name? “)
+3 last_name = input(“What is your last name? ”)
+4 if first_name == “John” and last_name == “Doe”:
+5         print(“Welcome, John Doe! ”)
+6 else:
+7 print(“Access denied. ”)
+</code><p>
+
+            Notice the <tt>and</tt> in line 4. <tt>and</tt> is one of four logic operators, the other three being <tt>or</tt>, <tt>not</tt>, and <tt>xor</tt>. Let’s see what each of these do.<p>
+
+<code>>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+</code><p>
+
+            So an <tt>and</tt> will give a <tt>True</tt> only when both inputs are true.<p>
+
+<code>>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+</code><p>
+
+            An <tt>or</tt> gives a <tt>True</tt> if any one of its inputs is true.
+
+<code>>>> not True
+False
+>>> not False
+True
+</code><p>
+
+            A <tt>not</tt> “flips” the input.
+
+<code>>>> True ^ True
+False
+>>> True ^ False
+True
+>>> False ^ True
+True
+>>> False ^ False
+False
+</code><p>
+
+            This character, <tt>^</tt>, is Shift + 6. This is what is used in python to denote <tt>xor</tt>, which gives <tt>True</tt> only when one if its inputs is true. It is probably the least used out of the 4, but it is good to know it in case you come across it.<p>
+
+            <p id='task'>
+            Tasks:
+
+            <ol>
+
+            <li>Create a program that gives a welcome message only if the user’s name is John Bob Doe. Use three <tt>input()</tt>s, and nested <tt>if</tt>s.</li>
+
+            <li>Do task one, but use operators instead.</li>
+
+            <ol>
+
+            <div class='navbuttons'>
+
+                <div class='back'>
+                    <a href="5.2.html">&lt;  Back</a>
+                </div>
+
+                <div class='next'>
+                    <a href="6.1.html">Next  &gt;</a>
+                </div>
+
+        </div>
+
+    </body>
+
+</html>
