@@ -112,11 +112,20 @@ Hello, John
             Close python, open it again, then do the following.<p>
 
 <code>>>> import my_first_function
->>> my_first_function.hello(John)
+>>> my_first_function.hello("John")
 Hello, John
 </code><p>
 
             So we can use a variable when we run a function, and the function can use it directly.<p>
+
+            We can also use multiple arguments:<p>
+
+<code>>>> def adder(a, b):
+...     return a + b
+...
+>>> adder(2, 7)
+9
+</code><p>
 
             Why do we use <tt>return</tt>? If we use <tt>print</tt>, we cannot do anything with the result. But when we use return, we can do other things to the result. This should make it clear:<p>
 
